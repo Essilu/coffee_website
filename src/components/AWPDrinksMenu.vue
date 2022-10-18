@@ -1,5 +1,4 @@
 <template>
-  <HeaderMenu />
   <h1>hello</h1>
   <div class="flexContainer">
     <coffeeCard
@@ -16,12 +15,11 @@
 </template>
 
 <script>
-import HeaderMenu from "@/components/headerMenu.vue";
 import coffeeCard from "../components/coffeeCard.vue";
 
 export default {
   name: "AWPDrinksMenu",
-  components: { HeaderMenu, coffeeCard },
+  components: { coffeeCard },
   data: function () {
     return {
       drinks: {},
@@ -30,7 +28,7 @@ export default {
   beforeCreate() {
     let components = this;
 
-    fetch("/api/drinks")
+    fetch("/api/drinks/popular")
       .then(function (response) {
         return response.json();
       })

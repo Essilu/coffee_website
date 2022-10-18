@@ -19,11 +19,6 @@ const routes = [
     name: "delivery",
     component: deliveryView,
   },
-  {
-    path: "/AWPDrinksMenu",
-    name: "AWPDrinksMenu",
-    component: () => import("../views/AWPDrinksMenu.vue"),
-  }
 ];
 
 const router = createRouter({
