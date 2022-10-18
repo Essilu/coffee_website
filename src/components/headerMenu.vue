@@ -1,13 +1,13 @@
 <template>
     <nav class="flex-container">
-        <img class="logo" src="../assets/coffeelogo.svg">
+        <img class="logo" alt="coffee shop logo" src="../assets/coffeelogo.svg">
         <div>
             <router-link class="navigation" to="/about">About us</router-link>
             <router-link class="navigation" to="/">Our product</router-link>
             <router-link class="navigation" to="/AWPDrinksMenu">Menu</router-link>
         </div>
         <div>
-            <img src="../assets/icons_cart.png" />
+            <img src="../assets/icons_cart.png" alt="add to cart icon"/>
             <input class="searchbar" type="text" placeholder="Cappucino">
         </div>
     </nav>

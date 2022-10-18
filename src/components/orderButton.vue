@@ -1,6 +1,6 @@
 <template>
   <button :style="{backgroundColor : color}" class="flex-container">
-    <p>Order now</p><img src="../assets/buyLogo.png" />
+    <p>Order now</p><img src="../assets/buyLogo.png" alt="cart icon logo"/>
   </button>
 </template>
 

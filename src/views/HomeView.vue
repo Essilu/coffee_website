@@ -14,7 +14,7 @@
         <p class="orangeMenu">More menu</p>
       </div>
     </div>
-    <img class="welcomeCoffee" src="../assets/imageCoffee.png" />
+    <img class="welcomeCoffee" alt="Coffee logo" src="../assets/imageCoffee.png" />
   </div>
 
   <div class="flex-container card-display">
@@ -37,7 +37,7 @@
         ><img
           src="../assets/toothpaste.png"
           style="border-radius: 15px; padding-top: 10px"
-          height="146"
+          height="146" alt="toothpaste"
       /></template>
       <template v-slot:middle>Toothpaste</template>
       <template v-slot:bottom>"Yummy" -A customer</template>
@@ -47,7 +47,7 @@
         ><img
           src="../assets/rocks.png"
           style="border-radius: 15px; padding-top: 10px"
-          height="146"
+          height="146" alt="rock picture"
       /></template>
       <template v-slot:middle>Rocks</template>
       <template v-slot:bottom>"Crunchy" -A person</template>
@@ -57,7 +57,7 @@
         ><img
           src="../assets/tide.png"
           style="border-radius: 15px; padding-top: 10px"
-          height="146"
+          height="146" alt="tide pods"
       /></template>
       <template v-slot:middle>Forbidden Candy</template>
       <template v-slot:bottom>"Tasty" -A kid probably</template>

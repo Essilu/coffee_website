@@ -4,7 +4,7 @@
             <div class="cardImage">
                 <div class="grade">
                     <p class="rating">3.9</p>
-                    <img id="star" src="../assets/iconstar.png" />
+                    <img id="star" alt="star" src="../assets/iconstar.png" />
                 </div>
                 <slot name="top"></slot>
             </div>

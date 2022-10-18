@@ -4,9 +4,9 @@
             <div class="cardImage">
                 <div class="grade">
                     <p class="rating">{{grade}} </p>
-                    <img id="star" src="../assets/iconstar.png" />
+                    <img id="star" alt="star" src="../assets/iconstar.png" />
                 </div>
-                <img id="product" :src="require(`@/assets/${file}`)" />
+                <img id="product" alt="product image" :src="require(`@/assets/${file}`)" />
             </div>
             <div class="cardDesc">
 
@@ -25,7 +25,7 @@
                         <p @click="changeColorBlue" id="cold">Cold</p>
                     </li>
                     <li id="buy">
-                        <img @dblclick="changeColorBuy" src="../assets/buyLogo.png" />
+                        <img @dblclick="changeColorBuy" alt="shopping cart icon" src="../assets/buyLogo.png" />
                     </li>
                 </ul>
 
