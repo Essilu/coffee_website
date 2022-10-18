@@ -1,6 +1,6 @@
 <template>
     <nav class="flex-container">
-        <img class="logo" alt="coffee shop logo" src="../assets/coffeelogo.svg">
+        <router-link to="/"><img class="logo" alt="coffee shop logo" src="../assets/coffeelogo.svg"></router-link>
         <div>
             <router-link class="navigation" to="/about">About us</router-link>
             <router-link class="navigation" to="/">Our product</router-link>

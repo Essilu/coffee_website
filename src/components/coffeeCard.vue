@@ -19,10 +19,10 @@
 
                 <ul id="bottom-line">
                     <li>
-                        <p @click="changeColorRed" id="hot">Hot</p>
+                        <p @click="changeColorRed" v-show="is_hot" id="hot">Hot</p>
                     </li>
                     <li >
-                        <p @click="changeColorBlue" id="cold">Cold</p>
+                        <p @click="changeColorBlue" v-show="!is_hot" id="cold">Cold</p>
                     </li>
                     <li id="buy">
                         <img @dblclick="changeColorBuy" alt="shopping cart icon" src="../assets/buyLogo.png" />
@@ -40,7 +40,7 @@ export default {
     name: "coffeeCard",
     props: {
         title: String,
-        grade: String,
+        grade: Number,
         orders: String,
         file: String,
         color: String,
@@ -52,14 +52,6 @@ export default {
             currentColor: 'white'
         }
     },
-    // ADD A METHOD TO CHANGE THE COLOR OF THE BUTTON TO REFLECT WHEN HOT OR COLD
-  /*   beforeMount() {
-        if (this.is_hot) {
-            this.currentColor = 'red'
-        } else {
-            this.currentColor = 'lightblue'
-        }
-    }, */
     methods: {
         changeColorRed() {
             if (this.currentColor == 'red') {

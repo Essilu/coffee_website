@@ -24,6 +24,7 @@
       :grade="coffee.rating"
       :orders="coffee.sells"
       :file="coffee.file"
+      :is_hot="coffee.is_hot"
       :key="coffee.id"
       @changeColor="changeColor($event)"
     />
@@ -100,22 +101,25 @@ export default {
           id: 1,
           name: "Vanilla Latte",
           sells: "21K",
-          rating: "4.8",
+          rating: 4.8,
           file: "vanilla_latte.png",
+          is_hot: true,
         },
         {
           id: 2,
           name: "Espresso",
           sells: "12K",
-          rating: "4.6",
+          rating: 4.6,
           file: "espresso.png",
+          is_hot: true,
         },
         {
           id: 3,
           name: "Hazelnut Latte",
           sells: "23K",
-          rating: "4.9",
+          rating: 4.9,
           file: "hazlenut_latte.png",
+          is_hot: true,
         },
       ];
       localStorage.setItem("menu", JSON.stringify(data));

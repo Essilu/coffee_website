@@ -1,5 +1,4 @@
 <template>
-  <h1>hello</h1>
   <div class="flexContainer">
     <coffeeCard
       v-for="drink in drinks"
@@ -20,6 +19,9 @@ import coffeeCard from "../components/coffeeCard.vue";
 export default {
   name: "AWPDrinksMenu",
   components: { coffeeCard },
+  props: {
+    drinkTypes: String,
+  },
   data: function () {
     return {
       drinks: {},
@@ -28,14 +30,39 @@ export default {
   beforeCreate() {
     let components = this;
 
-    fetch("/api/drinks/popular")
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-        components.drinks = data;
-      });
+    if (this.drinkTypes == "hot") {
+      fetch("/api/drinks/hot")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          components.drinks = data;
+        });
+    } else if (this.drinkTypes == "best") {
+      fetch("/api/drinks/best")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          components.drinks = data;
+        });
+    } else if (this.drinkTypes == "popular") {
+      fetch("/api/drinks/popular")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          components.drinks = data;
+        });
+    } else {
+      fetch("/api/drinks/")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          components.drinks = data;
+        });
+    }
   },
 };
 </script>
