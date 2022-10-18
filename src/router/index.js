@@ -18,6 +18,11 @@ const routes = [
     path: "/delivery",
     name: "delivery",
     component: deliveryView,
+  },
+  {
+    path: "/AWPDrinksMenu",
+    name: "AWPDrinksMenu",
+    component: () => import("../views/AWPDrinksMenu.vue"),
   }
 ];
 

@@ -4,7 +4,7 @@
         <div>
             <router-link class="navigation" to="/about">About us</router-link>
             <router-link class="navigation" to="/">Our product</router-link>
-            <router-link class="navigation" to="/delivery">Delivery</router-link>
+            <router-link class="navigation" to="/AWPDrinksMenu">Menu</router-link>
         </div>
         <div>
             <img src="../assets/icons_cart.png" />

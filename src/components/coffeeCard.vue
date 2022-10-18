@@ -21,10 +21,12 @@
                     <li>
                         <p @click="changeColorRed" id="hot">Hot</p>
                     </li>
-                    <li id="cold">
-                        <p @click="changeColorBlue" class="temperature">Cold</p>
+                    <li >
+                        <p @click="changeColorBlue" id="cold">Cold</p>
                     </li>
-                    <li id="buy"><img @dblclick="changeColorBuy" src="../assets/buyLogo.png" /></li>
+                    <li id="buy">
+                        <img @dblclick="changeColorBuy" src="../assets/buyLogo.png" />
+                    </li>
                 </ul>
 
             </div>
@@ -42,6 +44,7 @@ export default {
         orders: String,
         file: String,
         color: String,
+        is_hot: Boolean,
     },
     data() {
         return {
@@ -49,6 +52,14 @@ export default {
             currentColor: 'white'
         }
     },
+    // ADD A METHOD TO CHANGE THE COLOR OF THE BUTTON TO REFLECT WHEN HOT OR COLD
+  /*   beforeMount() {
+        if (this.is_hot) {
+            this.currentColor = 'red'
+        } else {
+            this.currentColor = 'lightblue'
+        }
+    }, */
     methods: {
         changeColorRed() {
             if (this.currentColor == 'red') {

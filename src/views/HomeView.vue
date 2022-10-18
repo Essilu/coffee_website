@@ -2,8 +2,13 @@
   <headerMenu />
   <div class="flex-container">
     <div class="welcome">
-      <h1 class="welcomeTitle">Enjoy your <span class="orange">coffee</span> before your activity</h1>
-      <p>Boost your productivity and build your mood with a glass of coffee in the morning</p>
+      <h1 class="welcomeTitle">
+        Enjoy your <span class="orange">coffee</span> before your activity
+      </h1>
+      <p>
+        Boost your productivity and build your mood with a glass of coffee in
+        the morning
+      </p>
       <div class="buttons">
         <OrderButton :color="currentColorBuy" />
         <p class="orangeMenu">More menu</p>
@@ -13,33 +18,51 @@
   </div>
 
   <div class="flex-container card-display">
-    <coffeeCard v-for="coffee in coffeeList" :title="coffee.name" :grade="coffee.rating" :orders="coffee.sells"
-      :file="coffee.file" :key="coffee.id" @changeColor="changeColor($event)" />
+    <coffeeCard
+      v-for="coffee in coffeeList"
+      :title="coffee.name"
+      :grade="coffee.rating"
+      :orders="coffee.sells"
+      :file="coffee.file"
+      :key="coffee.id"
+      @changeColor="changeColor($event)"
+    />
   </div>
 
   <h1>Made by you ! (slotted cards)</h1>
 
   <div class="flex-container">
     <SlottedCards>
-      <template v-slot:top><img src="../assets/toothpaste.png" style="border-radius:15px; padding-top: 10px;"
-          height="146"></template>
+      <template v-slot:top
+        ><img
+          src="../assets/toothpaste.png"
+          style="border-radius: 15px; padding-top: 10px"
+          height="146"
+      /></template>
       <template v-slot:middle>Toothpaste</template>
       <template v-slot:bottom>"Yummy" -A customer</template>
     </SlottedCards>
     <SlottedCards>
-      <template v-slot:top><img src="../assets/rocks.png" style="border-radius:15px; padding-top: 10px;"
-          height="146"></template>
+      <template v-slot:top
+        ><img
+          src="../assets/rocks.png"
+          style="border-radius: 15px; padding-top: 10px"
+          height="146"
+      /></template>
       <template v-slot:middle>Rocks</template>
       <template v-slot:bottom>"Crunchy" -A person</template>
     </SlottedCards>
     <SlottedCards>
-      <template v-slot:top><img src="../assets/tide.png" style="border-radius:15px; padding-top: 10px;"
-          height="146"></template>
+      <template v-slot:top
+        ><img
+          src="../assets/tide.png"
+          style="border-radius: 15px; padding-top: 10px"
+          height="146"
+      /></template>
       <template v-slot:middle>Forbidden Candy</template>
       <template v-slot:bottom>"Tasty" -A kid probably</template>
     </SlottedCards>
   </div>
-
 </template>
 
 <script>
@@ -54,38 +77,55 @@ export default {
     headerMenu,
     coffeeCard,
     OrderButton,
-    SlottedCards
+    SlottedCards,
   },
   data: function () {
     return {
-      currentColorBuy: '#2F2105',
-    }
+      currentColorBuy: "#2F2105",
+    };
   },
 
   methods: {
     changeColor(newColor) {
       this.currentColorBuy = newColor;
     },
-
   },
   beforeMount() {
-    var db = localStorage.getItem('menu')
+    let db = localStorage.getItem("menu");
     if (db) {
-      this.coffeeList = JSON.parse(db)
+      this.coffeeList = JSON.parse(db);
     } else {
-      var data = [
-        { id: 1, name: "Vanilla Latte", sells: "21K", rating: "4.8", file: "vanilla_latte.png" },
-        { id: 2, name: "Espresso", sells: "12K", rating: "4.6", file: "espresso.png" },
-        { id: 3, name: "Hazelnut Latte", sells: "23K", rating: "4.9", file: "hazlenut_latte.png" },
-      ]
-      localStorage.setItem('menu', JSON.stringify(data))
-      this.coffeeList = data
+      let data = [
+        {
+          id: 1,
+          name: "Vanilla Latte",
+          sells: "21K",
+          rating: "4.8",
+          file: "vanilla_latte.png",
+        },
+        {
+          id: 2,
+          name: "Espresso",
+          sells: "12K",
+          rating: "4.6",
+          file: "espresso.png",
+        },
+        {
+          id: 3,
+          name: "Hazelnut Latte",
+          sells: "23K",
+          rating: "4.9",
+          file: "hazlenut_latte.png",
+        },
+      ];
+      localStorage.setItem("menu", JSON.stringify(data));
+      this.coffeeList = data;
     }
   },
   beforeUnmount() {
     //alert("You will exit the page")
-  }
-}
+  },
+};
 </script>
 
 <style scopped>
@@ -95,11 +135,11 @@ export default {
 }
 
 .orange {
-  color: #FF902A;
+  color: #ff902a;
 }
 
 .orangeMenu {
-  color: #FF902A;
+  color: #ff902a;
   font-weight: bold;
 }
 
@@ -108,7 +148,7 @@ export default {
 }
 
 .orangeMenu:hover {
-  color: #FF902A;
+  color: #ff902a;
   text-decoration: underline;
 }
 
@@ -142,7 +182,7 @@ export default {
 }
 
 body {
-  background-color: #F9D9AA;
+  background-color: #f9d9aa;
   font-family: Poppins;
 }
 </style>
